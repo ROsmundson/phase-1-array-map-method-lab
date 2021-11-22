@@ -12,5 +12,15 @@ const tutorials = [
 ];
 
 const titleCased = () => {
-  return tutorials
+  return tutorials.map(tutorial => {
+    let str = tutorial.split(' ')
+    const newArray = str.map(word => word[0].toUpperCase() + word.slice(1))
+    return newArray.join(' ')
+  })
 }
+
+// function titleCase(str) {
+//   return str.toLowerCase().split(' ').map(function(word) {
+//     return word.replace(word[0], word[0].toUpperCase());
+//   }).join(' ');
+// }
